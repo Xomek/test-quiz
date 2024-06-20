@@ -7,11 +7,7 @@ import {
   Checkbox,
 } from "@mui/material";
 
-interface MultiChoiceQuestionProps {
-  questionId: number;
-  question: string;
-  options: string[];
-}
+import type { MultiChoiceQuestionProps } from "./MultiChoiceQuestion.types";
 
 const MultiChoiceQuestion: React.FC<MultiChoiceQuestionProps> = ({
   questionId,

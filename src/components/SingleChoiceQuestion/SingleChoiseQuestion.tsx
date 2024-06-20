@@ -2,11 +2,7 @@ import React from "react";
 import { useFormContext, Controller } from "react-hook-form";
 import { RadioGroup, FormControlLabel, Radio } from "@mui/material";
 
-interface SingleChoiceQuestionProps {
-  questionId: number;
-  question: string;
-  options: string[];
-}
+import type { SingleChoiceQuestionProps } from "./SingleChoiseQuestion.types";
 
 const SingleChoiceQuestion: React.FC<SingleChoiceQuestionProps> = ({
   questionId,

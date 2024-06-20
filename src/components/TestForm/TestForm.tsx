@@ -3,9 +3,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { useForm, FormProvider } from "react-hook-form";
 import { setAnswer, nextStep } from "../../store/testSlice";
-import MultiChoiceQuestion from "../MultiChoiseQuestion";
-import { ProgressBar } from "../ProgressBar";
-import SingleChoiceQuestion from "../SingleChoiseQuestion";
+import { MultiChoiceQuestion, ProgressBar, SingleChoiceQuestion } from "..";
 
 import type { RootState } from "../../store";
 import "./TestForm.css";

@@ -1,4 +1,4 @@
-import TestForm from "./components/TestForm/TestForm";
+import { TestForm } from "./components";
 import "./App.css";
 
 function App() {
