@@ -21,18 +21,24 @@ const TestForm: React.FC = () => {
     {
       id: 1,
       type: "single-choice",
+      question: "Почему программирование?",
+      options: ["Творчество", "Общение", "Развитие"],
+    },
+    {
+      id: 2,
+      type: "single-choice",
       question: "Зачем проходить тестовые разработчику?",
       options: ["Весело", "Показать навыки", "Прикольно", "Просто так"],
     },
     {
-      id: 2,
+      id: 3,
       type: "multi-choice",
       question: "Кандидат подходит?",
       options: ["Да", "Да", "Да", "Да"],
     },
 
     {
-      id: 3,
+      id: 4,
       type: "multi-choice",
       question: "Кандидат подходит?",
       options: ["Да", "Да", "Да", "Да"],
@@ -81,6 +87,8 @@ const TestForm: React.FC = () => {
     }
 
     dispatch(setAnswer({ questionId: currentQuestion.id, answer }));
+
+    methods.reset();
 
     if (currentStep < questions.length - 1) {
       dispatch(nextStep());
