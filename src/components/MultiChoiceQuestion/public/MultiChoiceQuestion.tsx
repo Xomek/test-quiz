@@ -1,4 +1,3 @@
-import React from "react";
 import { useFormContext, Controller } from "react-hook-form";
 import {
   FormControl,
@@ -7,7 +6,7 @@ import {
   Checkbox,
 } from "@mui/material";
 
-import type { MultiChoiceQuestionProps } from "./MultiChoiceQuestion.types";
+import type { MultiChoiceQuestionProps } from "../types/MultiChoiceQuestion.types";
 
 const MultiChoiceQuestion: React.FC<MultiChoiceQuestionProps> = ({
   questionId,

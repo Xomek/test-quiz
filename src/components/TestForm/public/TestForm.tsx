@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Stack, Typography } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { useForm, FormProvider } from "react-hook-form";
-import { setAnswer, nextStep } from "../../store/testSlice";
-import { MultiChoiceQuestion, ProgressBar, SingleChoiceQuestion } from "..";
+import { setAnswer, nextStep } from "../../../store/testSlice";
+import { MultiChoiceQuestion, ProgressBar, SingleChoiceQuestion } from "../..";
+import { questions } from "../constants/TestForm";
 
-import type { RootState } from "../../store";
-import "./TestForm.css";
+import type { RootState } from "../../../store";
+import "../styles/TestForm.css";
 
 const TestForm: React.FC = () => {
   const dispatch = useDispatch();
@@ -14,34 +15,6 @@ const TestForm: React.FC = () => {
     (state: RootState) => state.test
   );
   const methods = useForm();
-
-  const questions = [
-    {
-      id: 1,
-      type: "single-choice",
-      question: "Почему программирование?",
-      options: ["Творчество", "Общение", "Развитие"],
-    },
-    {
-      id: 2,
-      type: "single-choice",
-      question: "Зачем проходить тестовые разработчику?",
-      options: ["Весело", "Показать навыки", "Прикольно", "Просто так"],
-    },
-    {
-      id: 3,
-      type: "multi-choice",
-      question: "Кандидат подходит?",
-      options: ["Да", "Да", "Да", "Да"],
-    },
-
-    {
-      id: 4,
-      type: "multi-choice",
-      question: "Кандидат подходит?",
-      options: ["Да", "Да", "Да", "Да"],
-    },
-  ];
 
   const timeLimit = 300;
   const [timeLeft, setTimeLeft] = useState(timeLimit);

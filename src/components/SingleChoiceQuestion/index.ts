@@ -1,1 +1,1 @@
-export { default as SingleChoiceQuestion } from "./SingleChoiseQuestion";
+export { default as SingleChoiceQuestion } from "./public/SingleChoiseQuestion";
